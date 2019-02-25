@@ -1,0 +1,9 @@
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie{
+    padding : 5px 25px 10px 25px;
+    max-width: 25%;
+}
