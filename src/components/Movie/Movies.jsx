@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 import "./MovieData"
 import { initialMovies } from "./MovieData";
 import Movie from "./Movie"
-import Header from "./components/Header/Header"
+import Header from "../Header/Header"
 import './Movie.css'
 
 class Movies extends React.Component{
@@ -17,18 +17,12 @@ class Movies extends React.Component{
 
     render(){
         return(
-            <div>
-                <div>
-                    <Header />
-                </div>
                 <div className="movies">
                     {
                         Object
                             .keys(this.state.movies)
                             .map(key => <Movie key={key} meta={this.state.movies[key]} />)
                     }
-
-                </div>
             </div>
             
             
