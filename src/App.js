@@ -13,6 +13,7 @@ import {Menu, Icon} from "antd"
 import DisplayMovies from './components/Movie/MoviesDisplay'
 // import {Link} from "react-router-dom"
 import 'antd/dist/antd.css'
+import Router from "./Router"
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -53,7 +54,7 @@ class App extends Component {
 
       
       <div className="App">
-          <DisplayMovies />
+          <Router />
           {/* <PersonList /> */}
           {/* <div >
             <Movies />

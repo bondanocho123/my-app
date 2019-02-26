@@ -13,7 +13,6 @@ class MoviesDisplay extends Component{
         return(
             <div>
                 <Header />
-
                 <Movies />
             </div>
         )

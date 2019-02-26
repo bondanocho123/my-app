@@ -2,7 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 import "./Header.css"
 import {Menu, Icon} from "antd"
-// import {Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 import 'antd/dist/antd.css'
 
 
@@ -29,19 +29,20 @@ class Header extends React.Component{
 
     render(){
         return(
+            <div className="header">
+                <Menu onClick={this.handleClick}
+                    selectedKeys={[this.state.current]}
+                    mode="horizontal">
+                    <Menu.Item key="home">
+                        <Link to="/"><Icon type="home" />Home</Link>
+                    </Menu.Item>
+                    <Menu.Item key="galery" >
+                        <Link to="/movies"><Icon type="galery" />Galery</Link>
+                    </Menu.Item>
+                </Menu>
+            </div>
             
-            <Menu onClick={this.handleClick}
-                selectedKeys={[this.state.current]}
-                mode="horizontal">
-                <Menu.Item key="home">
-                    {/* <Link to="/"><Icon type="home" />Home</Link> */}
-                    Home
-                </Menu.Item>
-                <Menu.Item key="galery" >
-                    {/* <Link to="/movies"><Icon type="galery" />Galery</Link> */}
-                    Galeries            
-                </Menu.Item>
-            </Menu>
+            
 
         //   <SubMenu title={<span className="submenu-title-wrapper"><Icon type="setting" />Navigation Three - Submenu</span>}>
         //     <MenuItemGroup title="Item 1">

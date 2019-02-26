@@ -1,6 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import axios from "axios"
+import Header from "../Header/Header"
+
 
 class PersonList extends React.Component{
     constructor(){
@@ -22,6 +24,7 @@ class PersonList extends React.Component{
     render(){
         return(
             <div>
+                <Header />
                 <ul>
                     {this.state.persons.map(person => <li>{person.name}</li>)}
                 </ul>
